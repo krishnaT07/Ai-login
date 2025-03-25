@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #202123;
+      color: #d1d5db;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Main container */
+    .container {
+      display: flex;
+      width: 70%;
+      max-width: 1100px;
+      height: 600px;
+      background-color: #343541;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Left side (Text box) */
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px;
+      width: 50%;
+      background-color: #202123;
+      color: #e5e7eb;
+    }
+
+    .left-side h2 {
+      font-size: 1.5em;
+      color: #ececf1;
+      margin-bottom: 20px;
+    }
+
+    /* Typing text animation */
+    #animated-text {
+      font-family: 'Courier New', Courier, monospace;
+      color: #d1d5db;
+      font-size: 1.1em;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    /* Right side (Login/Signup Buttons) */
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      width: 50%;
+      background-color: #40414F;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .right-side h1 {
+      font-size: 2.5em;
+      color: #ECECF1;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      color: #ECECF1;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .button-group a {
+      text-decoration: none;
+      padding: 15px 25px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      font-weight: 500;
+      color: white;
+      background-color: #10a37f;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-group a:hover {
+      background-color: #0e8f6c;
+    }
+
+    footer {
+      margin-top: 20px;
+      color: #9ca3af;
+      font-size: 0.9em;
+      text-align: center;
+      width: 100%;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #10a37f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Side (Animated Text Box) -->
+    <div class="left-side">
+      <h2>What is ChatGPT?</h2>
+      <p id="animated-text"></p> <!-- Placeholder for animated text -->
+    </div>
+
+    <!-- Right Side (Login/Sign-up) -->
+    <div class="right-side">
+      <div class="logo">
+        <!-- Placeholder for logo -->
+        <img src="https://via.placeholder.com/100" alt="ChatGPT Logo" width="100px">
+      </div>
+      <h1>Welcome to ChatGPT</h1>
+      <p>Log in to continue or create an account</p>
+      <div class="button-group">
+        <a href="login.html">Log In</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+      <footer>
+        <p>
+          By continuing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- JavaScript for Typing Animation -->
+  <script>
+    const text = `ChatGPT is an AI model developed to assist in conversations and answer questions.
+Chat with AI and explore various topics, including creative writing, technical help, and more.
+Powered by advanced machine learning, ChatGPT can help you get started in seconds.`;
+
+    const typingSpeed = 50; // Speed at which the text appears
+    let index = 0;
+
+    function typeText() {
+      if (index < text.length) {
+        document.getElementById('animated-text').textContent += text.charAt(index);
+        index++;
+        setTimeout(typeText, typingSpeed);
+      }
+    }
+
+    window.onload = function() {
+      typeText(); // Start typing animation when page loads
+    };
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
