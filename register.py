@@ -85,7 +85,7 @@ def register():
 
 @app.route('/success/<username>')
 def success(username):
-    return render_template('register.html', username=username)
+    return render_template('web.html', username=username)
 
 
 def register_user(username, password, image_path):

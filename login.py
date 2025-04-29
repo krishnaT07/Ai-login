@@ -105,7 +105,7 @@ def login():
 # Route for success page
 @app.route('/success/<username>')
 def success(username):
-   return render_template('register.html', username=username)
+   return render_template('web.html', username=username)
 
 # Run the app
 if __name__ == '__main__':
